@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm("UploadTemplate", "Home", FormMethod.Post, new { enctype = "multipart/form-data", id = "frmDataCenterUpload" }))
+{
+    <h2>Index</h2>
+
+    <label> File Upload : </label>
+    <input type="file" name="file_Uploader" />
+
+    <input type="button" name="Upload" value="Upload" id="Upload" />
+}
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#Upload").click(function () {
+                $("#frmDataCenterUpload").submit();
+            });
+
+        });
+
+
+    </script>
+
